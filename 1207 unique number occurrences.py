@@ -1,3 +1,4 @@
+arr = [1,1,2,2,2,3]
 z= {}
 list1 = []
 for i in range(len(arr)):
@@ -13,3 +14,13 @@ for i in range(len(a)):
       list1.append(a[i])
 return True
 # time complexity O(n+n) ie O(n)
+# or 
+z= {}
+list1 = []
+for i in range(len(arr)):
+  if arr[i] in z:
+    z[arr[i]] = z[arr[i]]+1
+  else:
+    z[arr[i]] = 1
+a = list(z.values())
+return sorted(a)==sorted(list(set(a))
